@@ -23,11 +23,22 @@ function App() {
   console.log(location?.residents)
 
   return (
-    <div className='min-h-screen' style={{ backgroundImage: 'url("/rickYMortyFondoPC.png")', fontFamily: 'Bebas Neue' }}>
+  <div>
+
+{ 
+    location === null ? <div className='flex flex-col justify-center bg-black min-h-screen items-center'>
+      <img className="max-w-[400px]" src="rickYMortyPalabras.png" alt="" />
+      <img className='animate-spin w-[400px] h-[400px]' src="portal.png" alt="" />
+      <p className='text-white'>Cargando...</p> </div> 
+    :
+    <div className='min-h-screen' style={{ backgroundImage: 'url("/stars.jpg")', fontFamily: 'Bebas Neue' }}>
     <main className='bg-gradient-to-l from-[#000000] to-[#893446c4] px-4 min-h-screen text-white'>
         <Location location={location} setLocation={setLocation}/>
         <ResidentList residents={location?.residents}/>
       </main>
+     
+      </div>
+}
       </div>
   )
 }

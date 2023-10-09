@@ -25,10 +25,11 @@ useEffect(() => {
 }
     </section>
     {/* paginacion */}
-    <ul className="text-lg flex gap-3 justify-center flex-wrap bottom-3 relative">
+  
+    <ul className="text-lg flex gap-16 justify-center flex-wrap bottom-3 relative bg-black">
       {pages.map((page) => (
-      <li key={page}>
-        <button className={`p-2 rounded-full w-12 h-12 border-y-[#EDE288] border-y-4 border-x-[#893446] border-x-4 hover:border-y-[#893446] hover:border-x-[#EDE288] hover:bg-[#4f3345c5] hover:text-white transition-all duration-200 ${page === currentPage ? "bg-slate-500" : "bg-white text-black"}`} onClick={() => setCurrentPage(page)}>{page}</button>
+      <li className="bg-black" key={page}>
+        <button className={`fixed bottom-4  p-2 rounded-full w-12 h-12 border-y-[#EDE288] border-y-4 border-x-[#893446] border-x-4 hover:border-y-[#893446] hover:border-x-[#EDE288] hover:bg-[#4f3345c5] hover:text-white transition-all duration-200 ${page === currentPage ? "bg-[#893446] text-black animate-pulse" : "bg-white text-black"}`} onClick={() => setCurrentPage(page)}>{page}</button>
       </li>))}
     </ul>
 

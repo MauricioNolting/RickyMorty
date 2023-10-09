@@ -27,14 +27,13 @@ axios
 
 
     <section className="relative w-[400px] top-6 mx-auto grid gap-5 items-center">
+
       {/* la imagen hacer que gire */}
-        {/* <div className="overflow-hidden"></div> */}
-
-
-{/* submit de id */}
-      <form onSubmit={handleSubmit} className="flex border-black w-[220px] mx-auto">
+<img className="relative z-10" src="/rickYMortyPalabras.png" alt="" />
+<img className="absolute -top-36 animate-spin" src="/portal.png" alt="" />
+      <form onSubmit={handleSubmit} className="flex border-black w-[220px] mx-auto relative z-30">
         <input placeholder="Type a new location" name="idLocation" className="text-black px-2 rounded-l-2xl" type="number" />
-        <button type="submit" className="flex gap-2 px-2 rounded-r-full bg-[#ddc407] hover:text-[#8b6c73] transition-all duration-200"> Search  <IconSearch className="relative top-[2px]" size={18}/> </button>
+        <button type="submit" className="flex gap-2 px-2 rounded-r-full bg-[#20dd07] hover:text-black border-x-2 border-y-2 transition-all duration-200"> Search  <IconSearch className="relative top-[2px]" size={18}/> </button>
       </form>
 
 
@@ -51,8 +50,8 @@ axios
             <li>Population: <span className="text-cyan-100">{location?.residents.length ?? []}</span></li>
         </ul>
         </section>
+        
     </section>
-
 
   )
 }
