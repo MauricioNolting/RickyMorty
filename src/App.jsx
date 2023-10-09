@@ -13,14 +13,14 @@ function App() {
  
 
 
-  console.log(location?.residents)
+  
   useEffect(() => {
     axios.get(`https://rickandmortyapi.com/api/location/${getRandomNumber(126)}`)
     .then(({data}) => setLocation(data))
     .catch((err) => console.log(err))
   }, [])
 
-  console.log(location?.residents)
+  
 
   return (
   <div>
@@ -31,7 +31,7 @@ function App() {
       <img className='animate-spin w-[400px] h-[400px]' src="portal.png" alt="" />
       <p className='text-white'>Cargando...</p> </div> 
     :
-    <div className='min-h-screen' style={{ backgroundImage: 'url("/stars.jpg")', fontFamily: 'Bebas Neue' }}>
+    <div className='min-h-screen' style={{ backgroundImage: 'url("/fondo2.jpg")', fontFamily: 'Bebas Neue' }}>
     <main className='bg-gradient-to-l from-[#000000] to-[#893446c4] px-4 min-h-screen text-white'>
         <Location location={location} setLocation={setLocation}/>
         <ResidentList residents={location?.residents}/>
