@@ -6,8 +6,8 @@ const Modal = ({ isOpen, resident, characterStatus}) => {
   }
 
   return (
-      <div className="absolute min-h-screen z-50 bg-[#ffffffd5] rounded-3xl">
-        <div className="fixed top-6 left-20 mx-auto bg-slate-700 border-white border-4">
+      <div className="absolute min-h-screen z-50 bg-[#ffffffd5] rounded-3xl transition-all duration-500 ">
+        <div className="fixed z-[400] top-0 right-0 left-0 bottom-0 mx-auto my-auto max-w-[300px] max-h-[350px] border-white border-4 ">
             <header className="">
             {/*  Status */}
             <img className="border-spacing-2 h-[350px] border-[#893446] object-cover" src={resident?.image} alt="" />
